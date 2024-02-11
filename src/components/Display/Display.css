@@ -1,0 +1,12 @@
+.gridCustom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-gap: 32px;
+    grid-auto-flow: dense;
+}
+
+.image {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
