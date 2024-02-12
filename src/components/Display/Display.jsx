@@ -2,12 +2,13 @@ import React from 'react';
 import Products from '../displays/Products';
 import Users from '../displays/Users';
 import './Display.css';
+import LogIn from '../LogIn/LogIn';
 
 const Display = ({ displayType, data }) => {
     const components = {
         products: <Products data={data} />,
         users: <Users data={data} />,
-        logIn: null,
+        logIn: <LogIn />,
         cart: null,
     };
 

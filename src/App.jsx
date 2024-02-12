@@ -30,6 +30,12 @@ class App extends Component {
       });
   }
 
+  handleDisplayNoFetch = (displayType) => {
+    this.setState({
+      displayType,
+    });
+  }
+
   handleShowModal = (bool) => {
 
     this.setState({
@@ -44,7 +50,7 @@ class App extends Component {
   render() {
     return (
       <div className='flex flex-col h-dvh justify-between'>
-        <Header changeState={this.fetchDisplayData} />
+        <Header changeState={this.fetchDisplayData} changeDisplayNoFetch={this.handleDisplayNoFetch} />
         <Display displayType={this.state.displayType} data={this.state.data} />
         <Footer />
         {this.state.isModalShow && <Modal hideModal={this.handleShowModal} />}
